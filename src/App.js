@@ -1,4 +1,6 @@
+import Card from "./components/Card";
 import ExpancesItems from "./components/ExpancesItems";
+import './components/Expenses.css';
 
 function App() {
   const expenses = [
@@ -24,7 +26,7 @@ function App() {
   ];
 
   return (
-    <div>
+    <Card>
       {/* Attribute can be anything */}
       <ExpancesItems
         title={expenses[0].title} 
@@ -46,7 +48,7 @@ function App() {
         amount={expenses[3].amount}
         date={expenses[3].date}
       />
-    </div>
+    </Card>
   );
 }
 
