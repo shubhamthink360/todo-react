@@ -1,6 +1,7 @@
-import Card from "./components/Card";
-import ExpancesItems from "./components/ExpancesItems";
-import './components/Expenses.css';
+import Card from "./components/UI/Card";
+import ExpensesItems from "./components/Expenses/ExpensesItems";
+import './components/Expenses/Expenses.css';
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
   const expenses = [
@@ -26,29 +27,32 @@ function App() {
   ];
 
   return (
-    <Card>
+    <>
+    <NewExpense />
+    <Card className="expenses">
       {/* Attribute can be anything */}
-      <ExpancesItems
+      <ExpensesItems
         title={expenses[0].title} 
         amount={expenses[0].amount}
         date={expenses[0].date}
       />
-      <ExpancesItems
+      <ExpensesItems
         title={expenses[1].title} 
         amount={expenses[1].amount}
         date={expenses[1].date}
       />
-      <ExpancesItems
+      <ExpensesItems
         title={expenses[2].title} 
         amount={expenses[2].amount}
         date={expenses[2].date}
       />
-      <ExpancesItems
+      <ExpensesItems
         title={expenses[3].title} 
         amount={expenses[3].amount}
         date={expenses[3].date}
       />
     </Card>
+    </>
   );
 }
 
